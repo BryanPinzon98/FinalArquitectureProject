@@ -5,10 +5,17 @@
  */
 package VisitorPattern.DiscountElement;
 
+import VisitorPattern.PaymentMethod.IPaymentMethod;
+
 /**
  *
  * @author bryan
  */
-public class ApartmentDiscount {
+public class ApartmentDiscount implements IDiscountElement {
+
+    @Override
+    public void accept(IPaymentMethod iPaymentMethod) {
+        iPaymentMethod.apartmentDiscount(this);
+    }
     
 }

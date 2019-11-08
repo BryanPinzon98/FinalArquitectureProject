@@ -5,18 +5,23 @@
  */
 package VisitorPattern.PaymentMethod;
 
+import VisitorPattern.DiscountElement.ApartmentDiscount;
+import VisitorPattern.DiscountElement.HouseDiscount;
+import VisitorPattern.DiscountElement.ShopDiscount;
+import VisitorPattern.DiscountElement.WarehouseDiscount;
+
 /**
  *
  * @author bryan
  */
 public interface IPaymentMethod {
 
-    public void houseDiscount();
+    public void houseDiscount(HouseDiscount houseDiscount);
 
-    public void apartmentDiscount();
+    public void apartmentDiscount(ApartmentDiscount apartmentDiscount);
 
-    public void shopDiscount();
+    public void shopDiscount(ShopDiscount shopDiscount);
 
-    public void warehouseDiscount();
+    public void warehouseDiscount(WarehouseDiscount warehouseDiscount);
 
 }

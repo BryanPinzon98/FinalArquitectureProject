@@ -11,11 +11,6 @@ import VisitorPattern.PaymentMethod.IPaymentMethod;
  *
  * @author bryan
  */
-public class WarehouseDiscount implements IDiscountElement {
-
-    @Override
-    public void accept(IPaymentMethod iPaymentMethod) {
-        iPaymentMethod.warehouseDiscount(this);
-    }
-
+public interface IDiscountElement {
+    public void accept(IPaymentMethod iPaymentMethod);
 }

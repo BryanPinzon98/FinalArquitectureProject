@@ -6,7 +6,7 @@
 package Commercial;
 
 import AbstractFactory.AbstractFactory;
-import Residential.IResidential;
+import FacadePaymentMethod.FacadePaymentMethod;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -28,6 +28,7 @@ public class BusinessPlaceFactory extends AbstractFactory {
 
         Scanner in = new Scanner(System.in);
         ArrayList<ICommercial> businessPlaces = new ArrayList<>();
+        FacadePaymentMethod paymentMethod = FacadePaymentMethod.getInstance();
 
         System.out.println("Who type of business place are you interested?");
         System.out.println("1. Shop.");
@@ -52,9 +53,11 @@ public class BusinessPlaceFactory extends AbstractFactory {
         switch (businessPlaceSelected) {
             case 1:
                 iCommercial = new Shop(address, owner, squareMeters, commercialActivity);
+                paymentMethod.setBuildingType("SHOP");
                 break;
             case 2:
                 iCommercial = new Warehouse(address, owner, squareMeters, commercialActivity);
+                paymentMethod.setBuildingType("WAREHOUSE");
                 break;
         }
 

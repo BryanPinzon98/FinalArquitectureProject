@@ -23,7 +23,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         AbstractFactory newAbstractFactory;
 
-        System.out.println("--Welcome to Inmobiliarias S.A--");
+        System.out.println("--Welcome to Inmobiliarias LTDA--");
         System.out.println("What type of property do you want to create?");
         System.out.println("1. Residential.");
         System.out.println("2. Commercial. ");
@@ -40,7 +40,6 @@ public class Main {
                 newAbstractFactory.createBusinessPlace();
                 break;
         }
-
     }
 
 }
