@@ -17,6 +17,7 @@ import java.util.Scanner;
 public class BusinessPlaceFactory extends AbstractFactory {
 
     private ICommercial iCommercial = null;
+    private FacadePaymentMethod paymentMethod = null;
 
     @Override
     public void createLivingPlace() {
@@ -28,7 +29,7 @@ public class BusinessPlaceFactory extends AbstractFactory {
 
         Scanner in = new Scanner(System.in);
         ArrayList<ICommercial> businessPlaces = new ArrayList<>();
-        FacadePaymentMethod paymentMethod = FacadePaymentMethod.getInstance();
+        paymentMethod = FacadePaymentMethod.getInstance();
 
         System.out.println("Who type of business place are you interested?");
         System.out.println("1. Shop.");

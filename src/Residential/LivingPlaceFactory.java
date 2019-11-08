@@ -18,13 +18,14 @@ import java.util.Scanner;
 public class LivingPlaceFactory extends AbstractFactory {
 
     private IResidential iResidential = null;
+    private FacadePaymentMethod paymentMethod = null;
 
     @Override
     public void createLivingPlace() {
 
         Scanner in = new Scanner(System.in);
         ArrayList<IResidential> residentialPlaces = new ArrayList<>();
-        FacadePaymentMethod paymentMethod = FacadePaymentMethod.getInstance();
+        paymentMethod = FacadePaymentMethod.getInstance();
 
         System.out.println("Who type of business place are you interested?");
         System.out.println("1. House.");
